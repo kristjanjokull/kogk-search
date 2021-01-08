@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
+`
+
+export const SearchContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 1rem;
