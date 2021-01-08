@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Form, Icon, Input } from './form.styles';
 import SearchIcon from "./search-icon.svg";
 
-const Search = () => {
+const SearchForm = () => {
     const [searchValue, setSearchValue] = useState("")
     return (
         <Form onSubmit={ event => {
@@ -22,4 +22,4 @@ const Search = () => {
     )
 }
 
-export default Search
+export default SearchForm
