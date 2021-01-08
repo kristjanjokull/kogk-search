@@ -7,7 +7,18 @@ export const Container = styled.div`
 `
 
 export const ImageContainer = styled.div`
+    &:nth-child(1) {
+        grid-column: span 4;
+        grid-row: span 2;
+    }
 
+    &:nth-child(2), &::nth-child(3) {
+        grid-column: span 2;
+    }
+
+    &:nth-child(4), &::nth-child(5) {
+        grid-column: span 3;
+    }
 `
 
 export const Image = styled.img`
