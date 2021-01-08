@@ -1,14 +1,17 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-    background-color: red;
-
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
 `
 
 export const ImageContainer = styled.div`
-    background-color: green;
+
 `
 
 export const Image = styled.img`
-    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `
