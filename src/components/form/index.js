@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Button, Form, Icon, Input } from './form.styles';
 import SearchIcon from "./search-icon.svg";
 
-const SearchForm = () => {
-    const [searchValue, setSearchValue] = useState("")
+const SearchForm = ({ onFormSubmit }) => {
+    const [searchValue, setSearchValue] = useState("");
     return (
         <Form onSubmit={ event => {
             event.preventDefault()
-            console.log(`You searched for: ${searchValue}`)
+            console.log(`You searched for: ${searchValue}`);
+            onFormSubmit(searchValue);
         }}>
             <Input 
                 type="text" 
