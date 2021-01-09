@@ -56,6 +56,7 @@ export const InfoImageContainer = styled.div`
     width: 30%;
     height: 100%;
     padding: 1rem;
+    position: relative;
 `
 
 export const InfoImage = styled.img`
@@ -70,8 +71,22 @@ export const InfoText = styled.p`
 
 export const InfoLink = styled.a`
     text-decoration: none;
-    background-color: #f4eeee;
+    background-color: #f2f2f2;
     padding: 0.5rem 1rem;
     color: #2d2a2a;
     border-radius: 5px;
+    &:hover {
+        background-color: #f4eeee;
+    }
+`
+
+export const InfoCloseButton = styled.button`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    background-color: #f2f2f2;
+    cursor: pointer;
 `

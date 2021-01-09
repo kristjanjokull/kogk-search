@@ -3,13 +3,19 @@ import {
     Container,
     Image,
     ImageContainer,
-    InfoContainer,
 
-    InfoImage, InfoImageContainer,
 
+
+
+
+
+    InfoCloseButton, InfoContainer,
+    InfoImage,
+    InfoImageContainer,
     InfoLink,
     InfoText,
     InfoTitle,
+
     SearchContainer
 } from "./searchResults.styles";
 
@@ -56,7 +62,7 @@ const SearchResults = ({ searchQuery, searchResults }) => {
 
             {imageInfo && (
                 <InfoContainer show={openInfoWindow} onClick={() => setOpenInfoWindow(!openInfoWindow)}>
-                    <InfoImageContainer>
+                    <InfoImageContainer onClick={(e) => e.stopPropagation()}>
                         <InfoImage src={imageInfo.image} alt="mynd"/>
                         <InfoTitle>{imageInfo.title}</InfoTitle>
                         <InfoText>{imageInfo.description}</InfoText>
@@ -66,6 +72,9 @@ const SearchResults = ({ searchQuery, searchResults }) => {
                             rel="noreferrer">
                                 Lesa grein
                         </InfoLink>
+                        <InfoCloseButton onClick={() => setOpenInfoWindow(!openInfoWindow)}>
+                            Loka
+                        </InfoCloseButton>
                     </InfoImageContainer>
                 </InfoContainer>
             )}
