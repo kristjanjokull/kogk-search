@@ -89,4 +89,7 @@ export const InfoCloseButton = styled.button`
     border: none;
     background-color: #f2f2f2;
     cursor: pointer;
+    &:hover {
+        background-color: #f4eeee;
+    }
 `

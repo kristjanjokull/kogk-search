@@ -34,7 +34,8 @@ const SearchResults = ({ searchQuery, searchResults }) => {
 
     return (
         <Container>
-            { searchQuery !== "" && searchResults.length > 0 && (
+
+            { searchQuery !== "" && searchResults.length >= 0 && (
                <div>
                     <p>Leitin skilaði {searchResults.length} niðurstöðum</p>
                 </div>
