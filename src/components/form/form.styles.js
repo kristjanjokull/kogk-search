@@ -16,10 +16,11 @@ export const Icon = styled.img`
 export const Input = styled.input`
     width: 100%;
     height: 1.5rem;
-    padding: 0.5rem;
+    padding: 1.2rem;
     border: 1px solid rgb(226, 230, 233);
     border-radius: 2px;
     font-size: 0.8rem;
+    box-sizing: border-box;
     &:focus {
         outline-width: 0;
 }`
