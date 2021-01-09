@@ -3,19 +3,13 @@ import {
     Container,
     Image,
     ImageContainer,
-
-
-
-
-
-
-    InfoCloseButton, InfoContainer,
+    InfoCloseButton,
+    InfoContainer,
     InfoImage,
     InfoImageContainer,
     InfoLink,
     InfoText,
     InfoTitle,
-
     SearchContainer
 } from "./searchResults.styles";
 
