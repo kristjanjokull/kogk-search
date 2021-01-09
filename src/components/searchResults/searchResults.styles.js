@@ -10,22 +10,31 @@ export const SearchContainer = styled.div`
 `
 
 export const ImageContainer = styled.div`
-    &:nth-child(1) {
-        grid-column: span 4;
-        grid-row: span 2;
-    }
-
-    &:nth-child(2), &::nth-child(3) {
+    
+    ${({ itemsLength }) => itemsLength < 5 && `
         grid-column: span 2;
-    }
+        grid-row: span 2;
+    `}
 
-    &:nth-child(4), &::nth-child(5) {
-        grid-column: span 3;
-    }
+    ${({ itemsLength }) => itemsLength > 5 && `
+         &:nth-child(1) {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+
+        &:nth-child(2), &::nth-child(3) {
+            grid-column: span 2;
+        }
+
+        &:nth-child(4), &::nth-child(5) {
+            grid-column: span 3;
+        }
+    `}
 `
 
 export const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 `

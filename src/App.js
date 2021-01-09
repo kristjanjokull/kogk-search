@@ -28,8 +28,6 @@ function App() {
             })
             .then(res => res.json())
             .then(response => {
-                console.log('RESPONSE:');
-                console.log(response);
                 const items = response.items;
                 filterResults(items);
             })
@@ -41,7 +39,6 @@ function App() {
             <Title>Myndaleit</Title>
             <Form 
                 onFormSubmit={r => {
-                    console.log('onFormSubmit r: ', r);
                     perFormSearch(r);
                 }
             } />

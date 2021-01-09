@@ -17,7 +17,7 @@ const SearchResults = ({ searchQuery, searchResults }) => {
                     {searchResults.map((item, indx) => {
                         const imagePath = item.pagemap.cse_image[0].src;
                         return (
-                            <ImageContainer>
+                            <ImageContainer itemsLength={searchResults.length}>
                                 <Image src={imagePath} alt="mynd" key={indx} />
                             </ImageContainer>
                         )
