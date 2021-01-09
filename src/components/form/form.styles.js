@@ -23,6 +23,7 @@ export const Input = styled.input`
     box-sizing: border-box;
     &:focus {
         outline-width: 0;
+        outline: none;
 }`
 
 export const Button = styled.button`

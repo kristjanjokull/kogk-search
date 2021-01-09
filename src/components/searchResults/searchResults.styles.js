@@ -38,3 +38,40 @@ export const Image = styled.img`
     object-fit: cover;
     cursor: pointer;
 `
+
+export const InfoContainer = styled.div`
+    display: ${props => props.show ? `flex`: `none`};
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+`
+
+export const InfoImageContainer = styled.div`
+    background: white;
+    border-left: 1px solid #f4eeee;
+    width: 30%;
+    height: 100%;
+    padding: 1rem;
+`
+
+export const InfoImage = styled.img`
+    width: 100%;
+`
+export const InfoTitle = styled.h3`
+    text-align: center;
+`
+export const InfoText = styled.p`
+    margin-bottom: 1.2rem;
+`
+
+export const InfoLink = styled.a`
+    text-decoration: none;
+    background-color: #f4eeee;
+    padding: 0.5rem 1rem;
+    color: #2d2a2a;
+    border-radius: 5px;
+`
