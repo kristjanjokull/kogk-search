@@ -6,17 +6,16 @@ const SearchForm = ({ onFormSubmit }) => {
     const [searchValue, setSearchValue] = useState("");
     return (
         <Form onSubmit={ event => {
-            event.preventDefault()
-            console.log(`You searched for: ${searchValue}`);
+            event.preventDefault();
             onFormSubmit(searchValue);
         }}>
             <Input 
                 type="text" 
                 placeholder="Leitarorð"
                 value={searchValue}
-                onChange={v =>setSearchValue(v.target.value)} 
+                onChange={v => setSearchValue(v.target.value)} 
             />
-            <Button type="button">
+            <Button type="submit">
                 <Icon src={SearchIcon} alt="Search" />
             </Button>
         </Form>
