@@ -48,7 +48,7 @@ export const Image = styled.img`
     }
 `
 
-export const InfoContainer = styled.div`
+export const InfoOuterContainer = styled.div`
     display: ${props => props.show ? `flex`: `none`};
     flex-direction: column;
     align-items: flex-end;
@@ -59,7 +59,7 @@ export const InfoContainer = styled.div`
     height: 100%;
 `
 
-export const InfoImageContainer = styled.div`
+export const InfoInnerContainer = styled.div`
     background: white;
     border-left: 1px solid #f4eeee;
     width: 30%;

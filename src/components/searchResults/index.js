@@ -4,10 +4,13 @@ import {
     Image,
     ImageContainer,
     InfoCloseButton,
-    InfoContainer,
+
     InfoImage,
-    InfoImageContainer,
-    InfoLink,
+    InfoInnerContainer,
+    InfoLink, InfoOuterContainer,
+
+
+
     InfoText,
     InfoTitle,
     SearchContainer
@@ -56,8 +59,8 @@ const SearchResults = ({ searchQuery, searchResults }) => {
             )}
 
             {imageInfo && (
-                <InfoContainer show={openInfoWindow} onClick={() => setOpenInfoWindow(!openInfoWindow)}>
-                    <InfoImageContainer onClick={(e) => e.stopPropagation()}>
+                <InfoOuterContainer show={openInfoWindow} onClick={() => setOpenInfoWindow(!openInfoWindow)}>
+                    <InfoInnerContainer onClick={(e) => e.stopPropagation()}>
                         <InfoImage src={imageInfo.image} alt="mynd"/>
                         <InfoTitle>{imageInfo.title}</InfoTitle>
                         <InfoText>{imageInfo.description}</InfoText>
@@ -70,8 +73,8 @@ const SearchResults = ({ searchQuery, searchResults }) => {
                         <InfoCloseButton onClick={() => setOpenInfoWindow(!openInfoWindow)}>
                             Loka
                         </InfoCloseButton>
-                    </InfoImageContainer>
-                </InfoContainer>
+                    </InfoInnerContainer>
+                </InfoOuterContainer>
             )}
         </Container>
     )
