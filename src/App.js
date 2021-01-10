@@ -9,14 +9,18 @@ function App() {
     const [searchPending, setSearchPending] = useState(false);
 
     const filterResults = (results) => {
-        const filteredResults = [];
-        results.forEach(r => {
-            const pageMap = r.pagemap;
-            if(pageMap && pageMap.cse_image && pageMap.cse_image.length > 0) {
-                filteredResults.push(r);
-            }
-        });
-        setSearcResults(filteredResults);
+        if (results) {
+            const filteredResults = [];
+            results.forEach(r => {
+                const pageMap = r.pagemap;
+                if(pageMap && pageMap.cse_image && pageMap.cse_image.length > 0) {
+                    filteredResults.push(r);
+                }
+            });
+            setSearcResults(filteredResults);
+        } else {
+            setSearcResults([]);
+        }
     }
 
     const perFormSearch = (q) => {

@@ -78,6 +78,7 @@ export const InfoInnerContainer = styled.div`
 
 export const InfoImage = styled.img`
     width: 100%;
+    max-height: 250px;
 `
 export const InfoTitle = styled.h3`
     text-align: center;

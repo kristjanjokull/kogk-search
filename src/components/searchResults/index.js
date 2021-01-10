@@ -4,13 +4,10 @@ import {
     Image,
     ImageContainer,
     InfoCloseButton,
-
     InfoImage,
     InfoInnerContainer,
-    InfoLink, InfoOuterContainer,
-
-
-
+    InfoLink,
+    InfoOuterContainer,
     InfoText,
     InfoTitle,
     SearchContainer
