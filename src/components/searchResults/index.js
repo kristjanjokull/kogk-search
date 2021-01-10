@@ -16,7 +16,7 @@ import {
     SearchContainer
 } from "./searchResults.styles";
 
-const SearchResults = ({ searchQuery, searchResults }) => {
+const SearchResults = ({ searchQuery, searchResults, searchPending }) => {
     const [openInfoWindow, setOpenInfoWindow] = useState(false);
     const [imageInfo, setImageInfo] = useState(null);
 
@@ -32,7 +32,7 @@ const SearchResults = ({ searchQuery, searchResults }) => {
     return (
         <Container>
 
-            { searchQuery !== "" && searchResults.length >= 0 && (
+            { !searchPending && searchQuery !== "" && searchResults.length >= 0 && (
                <div>
                     <p>Leitin skilaði {searchResults.length} niðurstöðum</p>
                 </div>

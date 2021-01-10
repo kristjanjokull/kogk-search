@@ -6,6 +6,7 @@ import SearchResults from './components/searchResults';
 function App() {
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResults, setSearcResults] = useState([]);
+    const [searchPending, setSearchPending] = useState(false);
 
     const filterResults = (results) => {
         const filteredResults = [];
@@ -20,7 +21,7 @@ function App() {
 
     const perFormSearch = (q) => {
         const API_KEY = process.env.REACT_APP_API_KEY;
-        setSearcResults([]);
+        setSearchPending(true);
         setSearchQuery(q);
         if(q !== "") {
             fetch(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=001361074102112665899%3Ap7mybnrloug&q=${q}`,
@@ -31,8 +32,12 @@ function App() {
             .then(response => {
                 const items = response.items;
                 filterResults(items);
+                setSearchPending(false);
             })
-            .catch(error => console.log('error: ', error))
+            .catch(error => {
+                console.log('error: ', error);
+                setSearchPending(false);
+            })
         }
     }
     return (
@@ -43,7 +48,11 @@ function App() {
                     perFormSearch(r);
                 }
             } />
-            <SearchResults searchQuery={searchQuery} searchResults={searchResults} />
+            <SearchResults 
+                searchQuery={searchQuery} 
+                searchResults={searchResults} 
+                searchPending={searchPending} 
+            />
         </Container>
     );
 }
