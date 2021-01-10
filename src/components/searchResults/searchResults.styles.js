@@ -37,6 +37,15 @@ export const Image = styled.img`
     height: 100%;
     object-fit: cover;
     cursor: pointer;
+
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    
+    &:hover {
+        opacity: 0.9;
+        background-color: red;
+    }
 `
 
 export const InfoContainer = styled.div`
@@ -57,6 +66,14 @@ export const InfoImageContainer = styled.div`
     height: 100%;
     padding: 1rem;
     position: relative;
+
+    @media only screen and (max-width: 800px) {
+        width: 50%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 70%;
+    }
 `
 
 export const InfoImage = styled.img`

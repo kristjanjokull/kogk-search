@@ -20,7 +20,7 @@ const SearchResults = ({ searchQuery, searchResults }) => {
     const updateImageInfobox = (item) => {
         let result = { title: '', image: '', description: '', link: ''};
         result.title = item.title;
-        result.image = item.pagemap.cse_thumbnail[0].src;
+        result.image = item.pagemap.cse_image[0].src;
         result.description = item.snippet;
         result.link = item.link;
         setImageInfo(result);
