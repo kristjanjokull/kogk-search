@@ -19,10 +19,11 @@ function App() {
     }
 
     const perFormSearch = (q) => {
+        const API_KEY = process.env.REACT_APP_API_KEY;
         setSearcResults([]);
         setSearchQuery(q);
         if(q !== "") {
-            fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAYUizvEhkAK5RyJWYPlALE2MqvdOhYTP8&cx=001361074102112665899%3Ap7mybnrloug&q=${q}`,
+            fetch(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=001361074102112665899%3Ap7mybnrloug&q=${q}`,
             {
                 method: "GET",
             })
