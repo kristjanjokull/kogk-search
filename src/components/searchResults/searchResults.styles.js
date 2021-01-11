@@ -37,6 +37,7 @@ export const Image = styled.img`
     height: 100%;
     object-fit: cover;
     cursor: pointer;
+    max-height: 500px;
 
     opacity: 1;
     -webkit-transition: .3s ease-in-out;
